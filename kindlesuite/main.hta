@@ -1,0 +1,119 @@
+<style>
+body{
+background-image:url('resources/icons/bg.jpg');
+background-size:10px 100px;
+color:#b2d1e0;
+margin-left:auto%;
+font-family:helvetica;
+}
+input{
+            background: url(resources/icons/button.bmp) no-repeat;
+            cursor:pointer;
+                        border: none;
+	 }
+</style>
+<html>
+<head>
+<SCRIPT LANGUAGE="VBScript">
+
+    Sub Window_onLoad
+        window.resizeTo 750,525
+    End Sub 
+
+</SCRIPT>
+<title>KindleSuite_v2.3</title>
+<HTA:APPLICATION 
+     ID="objTest" 
+     APPLICATIONNAME="KindleSuite_v2.3"
+     SCROLL="NO"
+     SINGLEINSTANCE="YES"
+>
+</head>
+      <SCRIPT FOR="restorebat" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\checks\restorecheck.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="update" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "..\update.bat"
+		window.close()
+      </SCRIPT>
+	        <SCRIPT FOR="11310root" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\11310.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="11321root" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\11321.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="11322root" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\11322.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="stockrooter" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\stockmod.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="water" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\water.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="ice" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\ice.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="air" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\air.bat"
+      </SCRIPT>
+	        <SCRIPT FOR="hellfire" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\hellfire.bat"
+      </SCRIPT>
+
+<body>
+<h1 style="text-align:center"> KindleSuite 2.3 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
+<table>
+<tr>
+<td>
+<div class="restore" id=restore name="restore">
+<h2>Full Restore</h2>
+<input TYPE="button" NAME="restorebat" VALUE="Begin Restore" />
+</div>
+</td>
+<td>
+<h2>Root Device</h2>
+<h5>Select current software version</h5>
+<div class="root" id=root name="root">
+<input type="button" id=11310root class="11310root" name="11310root" value="11.3.1.0"/>
+<input type="button" id=11321root class="11321root" name="11321root" value="11.3.2.1"/>
+<input type="button" id=11310root class="11322root" name="11322root" value="11.3.2.2"/>
+</div>
+</td>
+</tr><tr><td>
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp&nbsp
+</td></tr><tr>
+<td>
+<div class="stockroot" name="stockroot" id=stockroot>
+<h2>Google Play Store</h2>
+<h5>This option will Install Google Play<br />Amazon Appstore will no longer work.</h5>
+<input type="button" id=stockrooter class="stockrooter" name="stockrooter" value="Install Gapps"/>
+</div>
+</td>
+<td>
+<div class="rom" name="rom" id=rom>
+<h2>Custom ROM</h2>
+<h5>Please select a custom image</h5>
+<input class="ice" name="ice" id=water type="button" value="Ice"/>
+<input class="hellfire" name="hellfire" id=water type="button" value="HellFire"/>
+</div>
+</td>
+</tr></table>
+copyright &copy 2014 KFSOWI Modding Team    - -     <a href="http://www.kfsowi.com">www.kfsowi.com</a> <img src="resources/icons/license.png" />
+  <!--textarea name="ScriptArea" rows=5 cols=70></textarea><p>
+  <input id=runbutton  type="button" value="Run Script" name="run_button"  onClick="TestSub"-->
+</body>
+
