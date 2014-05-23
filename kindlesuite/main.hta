@@ -70,9 +70,17 @@ input{
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\hellfire.bat"
       </SCRIPT>
+	  <SCRIPT FOR="adbdrive" EVENT="onClick" Language="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\AdbDriverInstaller.exe"
+	  </SCRIPT>
 
 <body>
 <h1 style="text-align:center"> KindleSuite 2.3 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
+<div style="text-align:center" class="drivers" name="drivers" id=drivers>
+<input type="button" id=adbdrive class="adbdrive" name="adbdrive" value="Install Drivers" />
+</div>
+<hr />
 <table>
 <tr>
 <td>
