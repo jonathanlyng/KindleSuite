@@ -9,7 +9,7 @@ KindleSuite is a collection of tools to modify the Amazon 2013 Kindle Fire HD 7"
 the file heirarchy is as follows
 
 KindleSuite
-  | RUNME.bat   -The user-end file to open the program)
+  | RUNME.bat   -The user-end file to open the program
   | update.bat  -script to allow users to update KS to the latest version
   | kindlesuite
      | adb
