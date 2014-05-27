@@ -21,10 +21,10 @@ input{
     End Sub 
 
 </SCRIPT>
-<title>KindleSuite_v2.3</title>
+<title>KindleSuite</title>
 <HTA:APPLICATION 
      ID="objTest" 
-     APPLICATIONNAME="KindleSuite_v2.3"
+     APPLICATIONNAME="KindleSuite"
      SCROLL="NO"
      SINGLEINSTANCE="YES"
 >
@@ -58,13 +58,9 @@ input{
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\water.bat"
       </SCRIPT>
-	        <SCRIPT FOR="ice" EVENT="onClick" LANGUAGE="VBScript">
+	        <SCRIPT FOR="browse" EVENT="onClick" LANGUAGE="VBScript">
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\ice.bat"
-      </SCRIPT>
-	        <SCRIPT FOR="air" EVENT="onClick" LANGUAGE="VBScript">
-        Set WshShell = CreateObject("WScript.Shell")
-        WshShell.Run "resources\tools\air.bat"
       </SCRIPT>
 	        <SCRIPT FOR="hellfire" EVENT="onClick" LANGUAGE="VBScript">
         Set WshShell = CreateObject("WScript.Shell")
@@ -76,7 +72,7 @@ input{
 	  </SCRIPT>
 
 <body>
-<h1 style="text-align:center"> KindleSuite 2.3 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
+<h1 style="text-align:center"> KindleSuite 2.4 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
 <div style="text-align:center" class="drivers" name="drivers" id=drivers>
 <input type="button" id=adbdrive class="adbdrive" name="adbdrive" value="Install Drivers" />
 </div>
@@ -114,9 +110,9 @@ input{
 <td>
 <div class="rom" name="rom" id=rom>
 <h2>Custom ROM</h2>
-<h5>Please select a custom image</h5>
-<input class="ice" name="ice" id=water type="button" value="Ice"/>
-<input class="hellfire" name="hellfire" id=water type="button" value="HellFire"/>
+<h5>Please select a custom image</h5><br />
+***ROM installation will be back in 2.5, sorry for the inconvenience***
+<input class="browse" name="browse" id=water type="button" value="browse..."/>
 </div>
 </td>
 </tr></table>
