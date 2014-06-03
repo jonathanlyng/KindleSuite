@@ -22,20 +22,17 @@ rename *.img hellfire.img
 cd ..\..\..\
 echo.
 echo.
-echo Moving HellFire to Kindle (Be patient, takes ~5 mins)
-echo Make sure kindle is plugged into 
-echo regular cable with ADB enabled!
-adb wait-for-device 
-echo moving...
-adb wait-for-device push resources\rom\hellfire\hellfire.img /sdcard/
+echo Please Power Kindle OFF and plug into fastboot cable
+fastboot wait-for-device devices
+fastboot -i 0x1949 flash system resources\rom\hellfire\hellfire.img
 echo.
 echo.
-echo Installing HellFire (takes ~5 mins)...
-adb shell su -c "dd if=/sdcard/hellfire.img of=/dev/block/mmcblk0p9"
+echo Hellfire installed
+echo Please plug Kindle into REGULAR cable now.
+pause
+fastboot -i 0x1949 continue
+adb wait-for-device reboot recovery
 echo.
-echo.
-echo Hellfire Installed, Rebooting Now!
-adb reboot recovery
-echo select wipe and reboot
+echo When Kindle enters Recovery Mode, please wipe device and reboot
 pause
 exit
