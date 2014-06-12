@@ -16,7 +16,6 @@ echo.
 echo.
 echo Unzipping HellFire...
 if not exist resources\rom\hellfire\*.img FBZip -e resources\rom\hellfire\hellfire.zip resources\rom\hellfire\
-rename resources\rom\hellfire\hellfire*.img resources\rom\hellfire\hellfire.img
 cd resources\rom\hellfire
 rename *.img hellfire.img
 cd ..\..\..\

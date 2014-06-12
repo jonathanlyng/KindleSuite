@@ -43,6 +43,10 @@ input{
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\11310.bat"
       </SCRIPT>
+	  	    <SCRIPT FOR="113232root" EVENT="onClick" LANGUAGE="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\113232.bat"
+      </SCRIPT>
 	        <SCRIPT FOR="11321root" EVENT="onClick" LANGUAGE="VBScript">
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\11321.bat"
@@ -79,11 +83,16 @@ input{
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\dlpc.bat"
 	  </SCRIPT>
+	  <SCRIPT FOR="kfl" EVENT="onClick" Language="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\kfl.bat"
+	  </SCRIPT>
 <body>
 <body>
-<h1 style="text-align:center"> KindleSuite 2.4 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
+<h1 style="text-align:center"> KindleSuite 2.6.1 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
 <div style="text-align:center" class="drivers" name="drivers" id=drivers>
 <input type="button" id=adbdrive class="adbdrive" name="adbdrive" value="Install Drivers" />
+<input type="button" id=kfl class="kfl" name="kfl" value="KF Linux" />
 </div>
 <hr />
 <table>
@@ -91,7 +100,7 @@ input{
 <td>
 <div class="restore" id=restore name="restore">
 <h2>Full Restore</h2>
-<input TYPE="button" NAME="restorebat" VALUE="Begin Restore" />
+<input TYPE="button" NAME="restorebat" VALUE="Restore 11.3.2.3.2" />
 </div>
 </td>
 <td>
@@ -101,6 +110,7 @@ input{
 <input type="button" id=11310root class="11310root" name="11310root" value="11.3.1.0"/>
 <input type="button" id=11321root class="11321root" name="11321root" value="11.3.2.1"/>
 <input type="button" id=11310root class="11322root" name="11322root" value="11.3.2.2"/>
+<input type="button" id=11310root class="113232root" name="113232root" value="11.3.2.3.2"/>
 </div>
 </td>
 </tr><tr><td>

@@ -21,6 +21,6 @@ echo Unplug Kindle and plug into REGULAR cable
 echo.
 pause
 adb wait-for-device reboot recovery
-echo Device upgrading to 11.3.2.2 now.
+echo Device upgrading to 11.3.2.3.2 now.
 pause
 exit
