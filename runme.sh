@@ -78,6 +78,7 @@ then
 		    mv ./kindlesuite/resources/update/upd* ./kindlesuite/resources/update/update.zip ;
 		    echo "power kindle OFF and plug into FASTBOOT cable"
 		    echo
+			fastboot -i 0x1949 flash boot ./kindlesuite/resources/boot/11322-boot.img
 		    fastboot -i 0x1949 flash system ./kindlesuite/resources/update/minisystem.img
 		    fastboot -i 0x1949 continue
 		    sleep 10
@@ -118,6 +119,7 @@ then
         else
             echo "power kindle OFF and plug into FASTBOOT cable"
 		    echo
+			fastboot -i 0x1949 flash boot ./kindlesuite/resources/boot/11322-boot.img
 		    fastboot -i 0x1949 flash system ./kindlesuite/resources/update/minisystem.img
 		    fastboot -i 0x1949 continue
 		    sleep 10

@@ -2,6 +2,7 @@
 echo.
 echo Power kindle OFF and plug into FASTBOOT cable
 echo.
+fastboot -i 0x1949 flash boot resources\boot\11322-boot.img
 fastboot -i 0x1949 flash system resources\update\minisystem.img
 fastboot -i 0x1949 continue 
 adb wait-for-device
