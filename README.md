@@ -45,7 +45,7 @@ KindleSuite
         |  | 11321.bat   - Root tool for 11.3.2.1
         |  | 11322.bat   - Root tool for 11.3.2.2
         |  | restore.bat - Tool to restore bricked/return kindles
-        |  | stockmod.bat - Tool to install Google PLay Services
+        |  | stockmod.bat - Tool to install Google Play Services
         | checks
         |  | restorecheck.bat  - Tools to check for latest KS version
         |  | versioncurrent
