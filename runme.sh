@@ -129,6 +129,7 @@ then
 		    echo
 		    echo "Moving update to Kindle (be patient)..."
 		    echo
+		    adb shell su -c "rm -rf /cache/*"
 		    adb shell su -c "chmod 777 /cache"
 		    adb push ./kindlesuite/resources/update/update.zip /cache/
 		    echo
