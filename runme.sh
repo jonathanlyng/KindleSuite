@@ -609,7 +609,7 @@ then
     echo "chose a rom for instalation:"
     echo " a)Ice"
     echo " b) Hellfire"
-#    echo " d)Plasma   "
+    echo " d)Plasma   "
     echo 
     echo 
     echo 
@@ -751,9 +751,61 @@ then
 			sleep 10
 			bash runme.sh
 			
-#	elif [ "$rom" = "c" ] ;
-#	then
-#	    clear
+	elif [ "$rom" = "c" ] ;
+	then
+	    clear
+	    	SCRIPTPATH="$( cd "$(dirname "$0")" ; pwd -P )"
+		mkdir -p $SCRIPTPATH/kindlesuiteresources/rom/plasma
+		if [ ! -f ./kindlesuite/resources/rom/plasma/plasma.zip ] ;
+		then
+			echo "downloading plasma..."
+			wget -P ./kindlesuite/resources/rom/plasma http://dl.kfsowi.com/roms/plasma/latest/plasma.zip ;
+			rm  ./kindlesuite/resources/rom/plasma/MD5
+			wget -P ./kindlesuite/resources/rom/plasma http://dl.kfsowi.com/roms/plasma/latest/MD5 ;
+		fi
+		if [ ! -f ./kindlesuite/resources/rom/plasma/MD5local ] ;
+		then
+			md5sum -u $./kindlesuite/resources/rom/plasma/plasma.zip > ./kindlesuite/resources/rom/plasma/MD5local
+			set /p md5=< ./kindlesuite/resources/rom/plasma/MD5
+			set /p md5local=< ./kindlesuite/resources/rom/plasma/MD5local
+		fi
+		if [ "$md5" != "$md5local" ] ;
+		then
+			echo " There was a problem with the download. Please close program and try again."
+			rmdir -p $pwd/kindlesuite/resources/rom/plasma
+			sleep 2
+			bash runme.sh
+		fi
+		echo
+		echo
+		echo Unzipping plasma...
+		if [ ! -f ./kindlesuite/resources/rom/plasma/plasma.img ] ;
+		then
+			unzip  ./kindlesuite/resources/rom/plasma/plasma.zip ./kindlesuite/resources/rom/plasma/
+			mv ./kindlesuite/resources/rom/plasma/plasma* ./kindlesuite/resources/rom/plasma/plasma.img
+		fi
+			echo
+			echo
+			echo "Moving plasma to Kindle (Be patient, takes ~5 mins)"
+			echo "Make sure kindle is plugged into" 
+			echo "regular cable with ADB enabled!"
+			adb wait-for-device 
+			echo "moving..."
+			adb wait-for-device
+			adb push ./kindlesuite/resources/rom/plasma/plasma.img /sdcard/
+			echo
+			echo
+			echo "Installing plasma (takes ~5 mins)..."
+			adb shell su -c "dd if=/sdcard/plasma.img of=/dev/block/mmcblk0p9"
+			echo
+			echo
+			echo "plasma Installed, Rebooting Now!"
+			adb reboot recovery
+			echo "select wipe and reboot"
+			sleep 10
+			bash runme.sh
+			
+	    
 	else
 	    bash runme.sh
 	fi
