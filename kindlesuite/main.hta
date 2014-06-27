@@ -87,6 +87,10 @@ input{
         Set WshShell = CreateObject("WScript.Shell")
         WshShell.Run "resources\tools\kfl.bat"
 	  </SCRIPT>
+	  <SCRIPT FOR="plasma" EVENT="onClick" Language="VBScript">
+        Set WshShell = CreateObject("WScript.Shell")
+        WshShell.Run "resources\tools\plasma.bat"
+	  </SCRIPT>
 <body>
 <body>
 <h1 style="text-align:center"> KindleSuite 2.7 <input type="button" style="font-size:8pt" id=update class="update" name="update" value="Check for updates" /></h1><hr />
@@ -135,6 +139,9 @@ input{
 <input class="hellfire" name="hellfire" id=hellfire type="button" value="HellFire"/>
 <br /><br />
 <input class="ice" name="ice" id=ice type="button" value="Ice"/>
+<br /><br />
+<input class="plasma" name="plasma" id=plasma type="button" value="Plasma"/>
+<br /><br />
 </div>
 </td>
 </tr></table>
