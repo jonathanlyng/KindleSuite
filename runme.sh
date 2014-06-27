@@ -609,7 +609,7 @@ then
     echo "chose a rom for instalation:"
     echo " a)Ice"
     echo " b) Hellfire"
-    echo " d)Plasma   "
+    echo " c)Plasma   "
     echo 
     echo 
     echo 
