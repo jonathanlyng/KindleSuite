@@ -81,9 +81,9 @@ then
 		    echo
 		    fastboot -i 0x1949 flash system ./kindlesuite/resources/update/minisystem.img
 		    fastboot -i 0x1949 continue
-		    echo" if you are stuck at ADB wait for device, plugin your regular cable"
-		    echo" plug it also into your computer and manually reboot the device by"
-            echo" long pressing power button"
+		    echo " if you are stuck at ADB wait for device, plugin your regular cable"
+		    echo " plug it also into your computer and manually reboot the device by"
+        	    echo " long pressing power button"
 		    echo
 		    adb wait-for-device
 		    echo
@@ -105,9 +105,9 @@ then
 		    clear
 		    echo
 		    echo
-		    echo"-----------------------------------------------------------------------"
-		    echo"important notice"
-		    echo"----------------"
+		    echo "-----------------------------------------------------------------------"
+		    echo "important notice"
+		    echo "----------------"
 		    echo
 		    echo "turn off wifi and execute 9) as soon as device is upgraded and installed. "
 		    echo "failure to do so can cause device to autoinstall an unrootable update"
@@ -117,13 +117,13 @@ then
 		    sleep 2
 		    bash runme.sh
         else
-            echo "power kindle OFF and plug into FASTBOOT cable"
+        	    echo "power kindle OFF and plug into FASTBOOT cable"
 		    echo
 		    fastboot -i 0x1949 flash system ./kindlesuite/resources/update/minisystem.img
 		    fastboot -i 0x1949 continue
-		    echo" if you are stuck at ADB wait for device, plugin your regular cable"
-		    echo" plug it also into your computer and manually reboot the device by"
-                    echo" long pressing power button"
+		    echo " if you are stuck at ADB wait for device, plugin your regular cable"
+		    echo " plug it also into your computer and manually reboot the device by"
+                    echo " long pressing power button"
 		    echo
 		    adb wait-for-device
 		    echo
@@ -146,9 +146,9 @@ then
 		    clear
 		    echo
 		    echo
-		    echo"-----------------------------------------------------------------------"
-		    echo"important notice"
-		    echo"----------------"
+		    echo "-----------------------------------------------------------------------"
+		    echo "important notice"
+		    echo "----------------"
 		    echo
 		    echo "turn off wifi and execute 9) as soon as device is upgraded and installed. "
 		    echo "failure to do so can cause device to autoinstall an unrootable update"
@@ -258,9 +258,9 @@ then
 		echo "Downgrading Boot Image..."
 		fastboot -i 0x1949 flash boot ./kindlesuite/resources/boot/11310-boot.img
 		fastboot -i 0x1949 continue
-		echo" if you are stuck at ADB wait for device, plugin your regular cable"
-		echo" plug it also into your computer and manually reboot the device by"
-                echo" long pressing power button"
+		echo " if you are stuck at ADB wait for device, plugin your regular cable"
+		echo " plug it also into your computer and manually reboot the device by"
+                echo " long pressing power button"
 		echo
 		adb wait-for-device
 		echo "Device connected. Pushing files..."
@@ -275,7 +275,7 @@ then
 		echo
 		echo
 		echo "rebooting fastboot..."
-		echo" if you have a regular cable, turn off device and plugin your fastboot cable"
+		echo " if you have a regular cable, turn off device and plugin your fastboot cable"
 		echo
 		adb reboot
 		fastboot -i 0x1949 wait-for-device devices
@@ -301,9 +301,9 @@ then
 		echo "Downgrading Boot Image..."
 		fastboot -i 0x1949 flash boot ./kindlesuite/resources/boot/11322-boot.img
 		fastboot -i 0x1949 continue
-		echo" if you are stuck at ADB wait for device, plugin your regular cable"
-		echo" plug it also into your computer and manually reboot the device by"
-                echo" long pressing power button"
+		echo " if you are stuck at ADB wait for device, plugin your regular cable"
+		echo " plug it also into your computer and manually reboot the device by"
+                echo " long pressing power button"
 		echo
 		adb wait-for-device
 		echo "Device connected. Pushing files..."
@@ -318,7 +318,7 @@ then
 		echo
 		echo
 		echo "rebooting fastboot..."
-		echo" if you have a regular cable, turn off device and plugin your fastboot cable"
+		echo " if you have a regular cable, turn off device and plugin your fastboot cable"
 		echo
 		adb reboot
 		fastboot -i 0x1949 wait-for-device devices
@@ -381,7 +381,7 @@ elif [ "$index" = "9" ] ;
 		adb shell
 		su
 		mount -o remount rw, /system
-		cd/system/app/
+		cd /system/app/
 		rm com.amazon.dcp.apk
 		rm com.amazon.dcp.odex
 		rm *dtcp*
@@ -521,7 +521,7 @@ then
 	    fi
 	    
 	    clear
-	    echo "Installing dlpc..."
+	    	echo "Installing dlpc..."
 		echo "Plug kindle into regular cable with ADB Debugging enabled..."
 		adb wait-for-device
 		echo
@@ -571,10 +571,10 @@ then
 		clear
 		echo "dlpc installed"
 		echo
-		echo"To check current run: dlp"
-		echo"To change        run: dlpc"
+		echo "To check current run: dlp"
+		echo "To change        run: dlpc"
 		echo
-		echo" via terminal emulator on Android itself"
+		echo " via terminal emulator on Android itself"
 		sleep 10
 		echo "reloading script"
 		sleep 2
