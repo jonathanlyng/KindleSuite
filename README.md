@@ -1,6 +1,9 @@
 KindleSuite
 ===========
-
+**obsolecence warning:*
+**the kindlesuite is now obsolete, fireOS has moved on, so did the authors*
+**the KFSOWI tools are now totally abandonned, this repository is kept intact*
+**as some parts of it "may" be used by someone finding a KFSOWI device from "back when"...*
 KFSOWI Tools
 
 
